@@ -1,6 +1,6 @@
 # 项目描述
 ## 项目展示
-效果图：![](https://cdn.jsdelivr.net/gh/Huansheng1/myimg/PicGo-img/20200812184426.gif)
+效果图：![](https://pic.imgdb.cn/item/5f33cd6a14195aa594007dae.gif)
 ## 项目功能
 > 功能完善，还有很多细节上的优化
 
