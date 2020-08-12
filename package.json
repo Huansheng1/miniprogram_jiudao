@@ -1,0 +1,22 @@
+{
+  "name": "miniprogram-1",
+  "version": "1.0.0",
+  "description": "幻生博客 - 记录编程点点滴滴",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Huansheng1/miniprogram_jiudao.git"
+  },
+  "keywords": [
+    "微信小程序、幻生作品"
+  ],
+  "author": "幻生",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huansheng1/miniprogram_jiudao/issues"
+  },
+  "homepage": "https://github.com/Huansheng1/miniprogram_jiudao#readme"
+}
