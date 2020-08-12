@@ -1,0 +1,110 @@
+/* components/searchDetail/index.wxss */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 20rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(238, 238, 238, 1);
+  box-shadow: 0px 2rpx 10rpx 0rpx rgba(203, 203, 203, 0.1);
+}
+
+.top-left {
+  position: relative;
+  flex: 1;
+}
+
+.search-img,
+.clear-img {
+  position: absolute;
+  left: 2rpx;
+  top: 2rpx;
+  padding: 20rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.clear-img {
+  left: 480rpx;
+  right: 22rpx;
+  top: 2rpx;
+}
+
+.search {
+  padding: 0 68rpx;
+  height: 74rpx;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 34px;
+}
+
+.top-right {
+  box-sizing: border-box;
+  margin-left: 30rpx;
+  width: 120rpx;
+  line-height: 68rpx;
+  text-align: center;
+  border: 1px solid rgba(102, 102, 102, 1);
+  border-radius: 34rpx;
+}
+
+.main {
+  padding: 40rpx 30rpx;
+}
+
+.history-title,
+.search-title,
+.popular-title {
+  padding-left: 22rpx;
+  border-left: 8rpx solid rgba(0, 0, 0, 1);
+  font-size: 28rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(1, 1, 1, 1);
+  line-height: 40rpx;
+}
+
+.tag-post {
+  border-radius: 0;
+  margin: 10rpx;
+}
+
+.tag {
+  padding-left: 12rpx;
+  margin-bottom: 20rpx;
+}
+
+.popular-content,
+.history-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 0;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+}
+
+.search-title {
+  width: 100%;
+  padding: 10rpx;
+  margin-left: 4rpx;
+
+}
+
+.books {
+  display: flex;
+  margin-top: 26rpx;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.books-item {
+  margin-bottom: 60rpx;
+  margin-left: 90rpx;
+  border: 1px solid rgba(208, 208, 208, 0.1);
+  box-shadow: 1px 2px 10px 0px rgba(203, 203, 203, 0.1);
+}

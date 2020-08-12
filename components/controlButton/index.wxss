@@ -1,0 +1,23 @@
+/* components/controlButton/index.wxss */
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding:0 78rpx;
+  background:#f7f7f7;
+  height: 80rpx;
+}
+
+.left,.right {
+  /* padding:24rpx; */
+  width: 80rpx;
+  height: 80rpx;
+}
+.content {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}

@@ -1,0 +1,44 @@
+.img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 32rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 1);
+  z-index: 1;
+  font-size: 24rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 34rpx;
+}
+
+.title {
+  font-size: 38rpx;
+}
+
+.link {
+  margin-top: 14rpx;
+  padding-bottom: 10rpx;
+  font-size: 34rpx;
+  border-bottom: 1rpx solid #fff;
+}
+
+.desc,
+.copyleft {
+  margin-top: 14rpx;
+  padding-left: 14rpx;
+  border-left: 6rpx solid #fff;
+}

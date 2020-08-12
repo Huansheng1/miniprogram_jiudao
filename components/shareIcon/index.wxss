@@ -1,0 +1,10 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-img {
+  width: 32rpx;
+  height: 28rpx;
+}

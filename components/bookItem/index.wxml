@@ -1,0 +1,10 @@
+<view class="wrapper" bindtap="onClickBook">
+  <image class="book-image" src="{{bookData.image}}" mode="widthFix" binderror="onLoadImgErr"></image>
+  <view class="book-content">
+    <view class="book-title">{{bookData.title}}</view>
+    <view class="book-author">{{bookData.author}}</view>
+    <view  class="book-info" wx:if="{{bookData.fav_nums}}">
+      <view class="book-like">{{bookData.fav_nums}} 喜欢</view>
+    </view>
+  </view>
+</view>

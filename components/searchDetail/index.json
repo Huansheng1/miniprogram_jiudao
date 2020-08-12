@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tag-cpn":"../../components/tag/index",
+    "book-cpn":"/components/bookItem/index"
+  }
+}

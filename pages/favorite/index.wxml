@@ -1,0 +1,32 @@
+<view class="wrapper">
+	<view class="top">
+		<view class="top-hd">
+			<image src="images/bgc.png" class="top-img"></image>
+			<user-cpn wx:if="{{!authorized}}" open-type="getUserInfo" class="avatar-position" bind:getuserinfo="onGetUserInfo">
+				<image slot="img" class="avatar" src="images/my.png" />
+			</user-cpn>
+			<view wx:if="{{authorized}}" class="avatar-container avatar-position">
+				<image src="{{userInfo.avatarUrl}}" class="avatar" />
+				<text>{{userInfo.nickName}}</text>
+			</view>
+		</view>
+		<view class="top-content">
+			<view class="top-about" bindtap="onClickAbout">
+				<image src="images/about.png" class="about-ico"></image>
+				<view class="about-text">关于我们</view>
+			</view>
+			<view class="top-nums">
+				<view class="nums-like">{{bookCount}}</view>
+				<view class="nums-desc">我的书单</view>
+			</view>
+		</view>
+	</view>
+	<view class="content">
+		<view class="content-title">喜欢</view>
+		<view class="content-main">
+			<block wx:for="{{classics}}" wx:key="index">
+				<preview-cpn classic="{{item}}" />
+			</block>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,7 @@
+<view class="wrapper">
+  <image class="content-image" src="{{classicData.image}}"></image>
+  <view class="icon">
+    <image class="icon-image" src="{{srcImage}}"></image>
+  </view>
+  <view class="content-text">{{classicData.content}}</view>
+</view>

@@ -1,0 +1,4 @@
+<view class="wrapper" bindtap="ontapSearch">
+  <view class="search-outter">搜索图书名称</view>
+  <image src="images/search.png" class="search-img"></image>
+</view>

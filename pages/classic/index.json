@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "date-cpn": "/components/dateStyle/index",
+    "like-icon-cpn":"/components/favoriteIcon/index",
+    "classic-cpn":"/components/classicContent/index",
+    "control-button":"/components/controlButton/index",
+    "share-cpn":"../../components/shareIcon/index",
+    "music-cpn":"/components/musicContent/index"
+  }
+}

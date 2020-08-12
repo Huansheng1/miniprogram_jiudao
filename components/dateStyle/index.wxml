@@ -1,0 +1,8 @@
+<view class="wrapper">
+  <view class="index-text">No.</view>
+  <view class="index-number">{{_index}}</view>
+  <view class="date-content">
+    <view class="month-text">{{month}}</view>
+    <view class="year-text">{{year}}</view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+/* components/search/index.wxss */
+.wrapper {
+  position: relative;
+  line-height: 68rpx;
+  width: 690rpx;
+  height: 68rpx;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 34rpx;
+}
+
+.search-outter {
+  padding-left: 40rpx;
+  width: auto;
+  height: 28rpx;
+  font-size: 28rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  text-align: center;
+}
+
+.search-img {
+  position: absolute;
+  top: 20rpx;
+  left: 242rpx;
+  width: 28rpx;
+  height: 28rpx;
+}

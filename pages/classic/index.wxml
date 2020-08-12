@@ -1,0 +1,16 @@
+<view class="wrapper">
+	<view class="header">
+		<date-cpn numIndex="{{classicData.index}}" class="date-cpn" />
+		<view class="header-right">
+			<like-icon-cpn bind:onlike="handleOnLike" likeCount="{{classicData.fav_nums}}" class="like-icon-cpn" likeStatus="{{classicData.like_status}}" />
+			<share-cpn class="share" />
+		</view>
+	</view>
+	<view class="content">
+		<classic-cpn classicData="{{classicData}}" wx:if="{{classicData.type!==200}}" />
+		<music-cpn wx:else classicData="{{classicData}}" />
+	</view>
+	<view class="footer">
+		<control-button title="{{classicData.title}}" bind:controlClicked="controlClicked" lastIndex="{{totalIndex}}" firstIndex="{{1}}" currentIndex="{{classicData.index}}" />
+	</view>
+</view>

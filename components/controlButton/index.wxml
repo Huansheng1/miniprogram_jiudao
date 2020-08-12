@@ -1,0 +1,6 @@
+<!--components/controlButton/index.wxml-->
+<view class="wrapper">
+  <image class="left" src="{{currentIndex>firstIndex?leftSrc:disableLeftSrc}}" bindtap="clickLeft"></image>
+  <view class="content">{{title}}</view>
+  <image class="right" src="{{currentIndex<lastIndex?rightSrc:disableRightSrc}}" bindtap="clickRight"></image>
+</view>

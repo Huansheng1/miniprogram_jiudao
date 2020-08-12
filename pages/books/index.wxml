@@ -1,0 +1,12 @@
+<view class="wrapper" wx:if="{{!showSearchDetail}}">
+  <search-cpn bind:clickedSearch="onClickedSearch" class="search-cpn" />
+  <view class="content">
+    <view class="books-title">精选</view>
+    <view wx:if="{{booksData}}" class="books" wx:for="{{booksData}}" wx:key="id">
+      <book-cpn book-data="{{item}}" class="books-item" bind:clickedBook="onClickBookItem" />
+    </view>
+  </view>
+</view>
+<view wx:else class="search-wrapper">
+  <search-detail-cpn bind:onSearchCancel="onSearchCancel" searchMore="{{loadingMore}}" clearSearchData="{{clearSearchData}}" />
+</view>

@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/classic/index",
+    "pages/books/index",
+    "pages/favorite/index",
+    "pages/bookDetail/index",
+    "pages/about/index"
+  ],
+  "tabBar": {
+    "color": "#C7C7C7",
+    "selectedColor": "#000000",
+    "list": [{
+      "pagePath": "pages/classic/index",
+      "text": "流行",
+      "iconPath": "./assets/images/classic.png",
+      "selectedIconPath": "./assets/images/classic@highlight.png"
+    }, {
+      "pagePath": "pages/books/index",
+      "text": "书单",
+      "iconPath": "./assets/images/book.png",
+      "selectedIconPath": "./assets/images/book@highlight.png"
+    }, {
+      "pagePath": "pages/favorite/index",
+      "text": "喜欢",
+      "iconPath": "./assets/images/my.png",
+      "selectedIconPath": "./assets/images/my@highlight.png"
+    }]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "旧岛-小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes": ["audio", "location"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

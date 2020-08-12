@@ -1,0 +1,4 @@
+<view class="wrapper" bindtap="onlike">
+  <image class="favorite-icon" src="{{likeStatus?srcHighLight:src}}"></image>
+  <view class="favorite-text">{{likeCount}}</view>
+</view>

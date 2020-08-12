@@ -1,0 +1,9 @@
+<view class="wrapper">
+  <image src="images/bgc.png" class="img"></image>
+  <view class="content">
+    <view class="title">小程序个人开发作品</view>
+    <view class="link">https://hs.xuexizuoye.com</view>
+    <view class="desc">使用了小程序绝大部分常用代码与知识...</view>
+    <view class="copyleft">更多项目，欢迎访问博客</view>
+  </view>
+</view>

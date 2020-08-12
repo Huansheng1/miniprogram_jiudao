@@ -1,0 +1,3 @@
+<user-cpn class="wrapper" open-type="share" bind:share="onGetUserInfo">
+  <image src="images/share.png" class="share-img" slot="img"></image>
+</user-cpn>

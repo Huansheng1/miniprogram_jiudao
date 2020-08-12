@@ -1,0 +1,65 @@
+/* components/musicContent/index.wxss */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-image {
+  margin-top: 46rpx;
+  width: 420rpx;
+  height: 420rpx;
+  border-radius: 50%;
+}
+
+.icon {
+  position: relative;
+  top: -60rpx;
+  padding-left: 30rpx;
+  width: 100%;
+}
+
+.icon-image {
+  width: 46rpx;
+  height: 142rpx;
+  font-size: 50rpx;
+  font-family: PingFangSC;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 1);
+  line-height: 50rpx;
+}
+
+.content-text {
+  font-size: 34rpx;
+  font-family: PingFang;
+  font-weight: 500;
+  color: rgba(15, 15, 15, 1);
+  line-height: 50rpx;
+  max-width: 558rpx;
+}
+
+.control-icon {
+  position: absolute;
+  top: -204rpx;
+  left: 334rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.rotation {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12s linear infinite;
+  -webkit-animation: rotation 12s linear infinite;
+  -o-animation: rotation 12s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

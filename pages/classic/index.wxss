@@ -1,0 +1,23 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border:1px solid rgba(238,238,238,1);
+}
+.header-right{
+  display: inline-flex;
+  align-items: center;
+}
+.footer{
+  position: fixed;
+  bottom: 42rpx;
+  width: 100%;
+}
+.share{
+  margin-left: 16rpx;
+}

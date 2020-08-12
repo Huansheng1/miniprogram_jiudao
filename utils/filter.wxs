@@ -1,0 +1,17 @@
+function arrayFilter(tagArray, startIndex = 0, limitNumber) {
+  return tagArray.slice(startIndex, limitNumber)
+}
+function replaceWrap(text){
+  // 如果传入为空，则直接返回
+  if(!text) return 
+  // WXS里 生成 regexp 对象需要使用 getRegExp函数。
+  // 第一个参数匹配\\n字符（因为其\为特殊字符，则需要转义符\）；g表示全局匹配
+  var regExp = getRegExp('\\\\n','g')
+  // 将匹配到的全部替换为\n ，这里不需转义哦;通过对文本进行处理，增加空格
+  var txtData = '&nbsp;&nbsp;&nbsp;&nbsp;' + text.replace(regExp,'\n&nbsp;&nbsp;&nbsp;&nbsp;')
+  return txtData
+}
+module.exports = {
+  arrayFilter: arrayFilter,
+  replaceWrap: replaceWrap
+}

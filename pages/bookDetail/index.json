@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "tag-cpn":"../../components/tag/index",
+    "like-cpn":"../../components/favoriteIcon/index",
+    "share-cpn":"../../components/shareIcon/index",
+    "mask-cpn":"../../components/mask/index"
+  }
+}

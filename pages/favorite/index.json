@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "user-cpn": "/components/userInfoButton/index",
+    "preview-cpn": "/components/preview/index"
+  }
+}

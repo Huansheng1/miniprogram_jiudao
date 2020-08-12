@@ -1,0 +1,56 @@
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class="wrapper">
+	<view class="top">
+		<image class="book-img" src="{{bookDetailData.image}}" binderror="onLoadImgErr"></image>
+		<view class="title">{{bookDetailData.title}}</view>
+		<view class="author">{{bookDetailData.author[0]}}</view>
+	</view>
+	<view class="ratings">
+		<view class="rating-title">短评</view>
+		<view class="tag-content">
+			<block wx:if="{{bookTags.length}}" wx:for="{{filter.arrayFilter(bookTags,0,10)}}" wx:key="index">
+				<tag-cpn tag="{{item.content}}" tag-class="{{index===0?'extal-tag-2 ':'' || index===1?'extal-tag':''}}" class="tag">
+					<text class="tag-number" slot="after">+{{item.nums}}</text>
+				</tag-cpn>
+			</block>
+      <tag-cpn wx:if="{{!bookTags.length}}" class="tag" tag="暂无短评呀~"></tag-cpn>
+		</view>
+	</view>
+	<view class="center" wx:if="{{bookDetailData.summary.length}}">
+		<view class="center-title">内容简介</view>
+    <!-- 注意啊，text标签会自动对\n等符号进行正确处理，而view则无法正确识别为换行符；为了识别更多，比如空格，我们加上decode解码属性 -->
+		<text class="center-text" decode>{{filter.replaceWrap(bookDetailData.summary)}}</text>
+	</view>
+	<view class="bottom">
+		<view class="bottom-title">书本信息</view>
+		<view class="publish">出版社：{{bookDetailData.publisher}}</view>
+		<view class="year">出版年：{{bookDetailData.pubdate}}</view>
+		<view class="page-number"> 页数：{{bookDetailData.pages}}</view>
+		<view class="price"> 定价：{{bookDetailData.price}}</view>
+		<view class="binding"> 精装：{{bookDetailData.binding}}</view>
+		<view class="category"> 分类：{{bookDetailData.category}}</view>
+		<view class="translator" wx:if="{{bookDetailData.translator[0]}}"> 译者：{{bookDetailData.translator[0]}}</view>
+	</view>
+  <view class="fixed-wrapper">
+    <input class="input" bindtap="showPostView" placeholder="请输入您的短评"></input>
+    <like-cpn bind:onlike="handleOnLike" likeCount="{{fav_nums}}" likeStatus="{{like_status}}"  class="like" />
+    <share-cpn class="share" />
+  </view>
+  <mask-cpn wx:if="{{postStatus}}" />
+  <view class="post-view" wx:if="{{postStatus}}">
+    <view class="post-view-hd">
+      <view class="cancle" bindtap="onCancle">取消</view>
+      <view class="confirm" bindtap="onConfirm">提交</view>
+    </view>
+    <view class="post-view-bd">
+    <!-- {{bookTags}} -->
+      <block wx:if="{{bookTags.length}}"  wx:for="{{filter.arrayFilter(bookTags,0,6)}}" wx:key="index">
+				<tag-cpn bindtap="addComment" tag="{{item.content}}" tag-class="{{index===0?'extal-tag-2 ':'' || index===1?'extal-tag':''}}" class="tag tag-post" data-index="{{index}}">
+				</tag-cpn>
+			</block>
+      <tag-cpn wx:if="{{!bookTags.length}}" class="tag" tag="暂无短评呀~"></tag-cpn>
+    </view>
+    <!-- 自动聚焦属性；设置最大输入长度；设置键盘右下角按钮的文字，仅在type='text'时生效；通过绑定Input事件实时将输入框内容存储起来，方便上面的提交按钮使用 -->
+    <input class="post-view-input" placeholder="短评长度在十二字内哦~" focus maxlength="12" confirm-type="提交" bindconfirm="onConfirmFinish" bindinput="saveInputTxt"></input>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<view class="wrapper">
+	<view class="top">
+		<view class="top-left">
+			<image class="search-img" src="images/search.png" bindtap="onSearchConfirm"></image>
+			<!-- 双向绑定，类似于vue的v-model -->
+			<input class="search" placeholder="搜索图书名称" focus bindconfirm="onSearchConfirm" model:value="{{keywordValue}}"></input>
+			<image class="clear-img" src="images/clear.png" bindtap="onClear"></image>
+		</view>
+		<view class="top-right" bindtap="onCancel">
+			取消
+		</view>
+	</view>
+	<view class="main" wx:if="{{!showSearchResult}}">
+		<view class="history">
+			<view class="history-title">历史搜索</view>
+			<view class="history-content">
+        <block wx:if="{{searchData.length}}" wx:for="{{searchData}}" wx:key="index">
+					<tag-cpn bindtap="onHistorySearch" tag="{{item}}" class="tag tag-post" data-index="{{index}}">
+					</tag-cpn>
+				</block>
+				<tag-cpn wx:if="{{!searchData.length}}" class="tag" tag="还没有搜索过呀~"></tag-cpn>
+			</view>
+		</view>
+		<view class="popular">
+			<view class="popular-title">热门搜索</view>
+			<view class="popular-content">
+				<block wx:if="{{popularTags.length}}" wx:for="{{popularTags}}" wx:key="index">
+				<!-- 其实我们这里将item传递过去更好，而不是index，还需再取一次值 -->
+					<tag-cpn bindtap="onPopularSearch" tag="{{item}}" class="tag tag-post" data-index="{{index}}">
+					</tag-cpn>
+				</block>
+				<tag-cpn wx:if="{{!popularTags.length}}" class="tag" tag="暂无热门搜索呀~"></tag-cpn>
+			</view>
+		</view>
+	</view>
+	<view class="content" wx:if="{{showSearchResult}}">
+    <view class="search-title">搜索结果</view>
+    <view wx:if="{{bookData.length}}" class="books" wx:for="{{bookData}}" wx:key="id" bind>
+      <book-cpn book-data="{{item}}" class="books-item" bind:clickedBook="onClickBookItem" />
+    </view>
+		<tag-cpn wx:if="{{!bookData.length}}" class="tag" tag="暂无结果呀~"></tag-cpn>
+  </view>
+</view>

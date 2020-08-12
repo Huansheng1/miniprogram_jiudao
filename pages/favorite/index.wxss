@@ -1,0 +1,89 @@
+/* pages/favorite/index.wxss */
+.top-hd {
+  position: relative;
+}
+
+.top-img {
+  width: 100%;
+  height: 370rpx;
+}
+
+.top-content {
+  padding: 30rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-content,
+.top-nums {
+  text-align: center;
+}
+
+.about-ico,
+.nums-like {
+  width: 34rpx;
+  height: 34rpx;
+  font-size: 36rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+
+.nums-like {
+  position: relative;
+  left: 24rpx;
+}
+
+.about-text,
+.nums-desc {
+  font-size: 24rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 40rpx;
+}
+
+.content {
+  box-sizing: border-box;
+  padding: 34rpx 30rpx;
+  width: 100%;
+  background: rgba(245, 245, 245, 0.62);
+}
+
+.content-title {
+  margin-bottom: 34rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 34rpx;
+  font-family: PingFang;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 40rpx;
+}
+.avatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
+.avatar-position {
+  position: absolute;
+  top: 144rpx;
+  left: 324rpx;
+}
+
+.content-main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

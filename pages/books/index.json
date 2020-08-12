@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "search-cpn": "/components/search/index",
+    "book-cpn":"/components/bookItem/index",
+    "search-detail-cpn":"/components/searchDetail/index"
+  }
+}
